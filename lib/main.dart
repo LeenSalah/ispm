@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'Screens/Home.dart';
 void main (){
-  runApp(Ispm());
+  runApp(const Ispm());
 }
 
 class Ispm extends StatefulWidget {
@@ -15,7 +15,7 @@ class Ispm extends StatefulWidget {
 class _IspmState extends State<Ispm> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Home(),
     );
