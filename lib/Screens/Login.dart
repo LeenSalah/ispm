@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ispm/Screens/Users.dart';
 import 'package:ispm/Screens/signup.dart';
 
 class Login extends StatelessWidget {
@@ -6,14 +7,14 @@ class Login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Padding(
-          padding: const EdgeInsets.all(80.0),
-          child: const Text(
+        title: const Padding(
+          padding: EdgeInsets.all(80.0),
+          child: Text(
             'Login Page',
-            style: TextStyle(fontSize: 22),
+            style: TextStyle(fontSize: 22,color: Colors.white),
           ),
         ),
-        backgroundColor: Color(0xff135D66),
+        backgroundColor: const Color(0xff135D66),
       ),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
@@ -38,13 +39,15 @@ class Login extends StatelessWidget {
               padding: const EdgeInsets.all(50.0),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xff135D66),
+                  backgroundColor: const Color(0xff135D66),
                   fixedSize: const Size(350, 50),
                 ),
                 onPressed: () {
-                  // Add login logic here
-                },
-                child: const Text('Login', style: TextStyle(fontSize: 20),),
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) =>  const Users()),
+                  );                },
+                child: const Text('Login', style: TextStyle(fontSize: 20, color: Colors.white),),
               ),
             ),
             const SizedBox(height: 10.0),
@@ -54,22 +57,23 @@ class Login extends StatelessWidget {
                   "Don't have an account? ",
                   style: TextStyle(fontSize: 20.0),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color(0xff135D66),
-                    fixedSize: Size(200, 55)
+                    backgroundColor: const Color(0xff135D66),
+                    fixedSize: const Size(200, 55)
                   ),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) =>  SignUp()),
+                      MaterialPageRoute(builder: (context) =>  const SignUp()),
                     );
 
                   },
                   child: const Text(
                     'SignUp',
-                    style: TextStyle(fontSize: 20.0),
+                    style: TextStyle(fontSize: 20.0, color: Colors.white),
+
                   ),
                 ),
               ],

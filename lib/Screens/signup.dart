@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Users.dart';
+
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
 
@@ -12,14 +14,14 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Padding(
-            padding: const EdgeInsets.all(75.0),
-            child: const Text(
+          title: const Padding(
+            padding: EdgeInsets.all(75.0),
+            child: Text(
               'SignUp page',
-              style: TextStyle(fontSize: 22),
+              style: TextStyle(fontSize: 22,color: Colors.white),
             ),
           ),
-          backgroundColor: Color(0xff135D66),
+          backgroundColor: const Color(0xff135D66),
         ),
         body: Padding(
             padding: const EdgeInsets.all(30.0),
@@ -51,15 +53,18 @@ class _SignUpState extends State<SignUp> {
                     padding: const EdgeInsets.all(50.0),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Color(0xff135D66),
+                        backgroundColor: const Color(0xff135D66),
                         fixedSize: const Size(350, 50),
                       ),
                       onPressed: () {
-                        // Add login logic here
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) =>  const Users()),
+                        );
                       },
                       child: const Text(
                         'SignUp',
-                        style: TextStyle(fontSize: 20),
+                        style: TextStyle(fontSize: 20,color: Colors.white),
                       ),
                     ),
                   ),
