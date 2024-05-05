@@ -22,7 +22,7 @@ class _IndividualsPageState extends State<IndividualsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: 'Individual'),
+      appBar: const CustomAppBar(title: 'Individual'),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(

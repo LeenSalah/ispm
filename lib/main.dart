@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ispm/individuals.dart';
 import 'package:ispm/nav_bar_screen.dart';
 import 'package:sizer/sizer.dart';
 

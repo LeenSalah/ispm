@@ -12,8 +12,8 @@ class BottomNavBar extends StatelessWidget {
       PersistentTabController(initialIndex: 0);
   final List<Widget> screens = [const IndividualsPage(), const ChildrenPage()];
   final List<PersistentBottomNavBarItem> items = [
-    PersistentBottomNavBarItem(icon: Icon(Icons.person, size: 7.w,), title: 'Individual', activeColorPrimary: Color(0xFF135D66), inactiveColorPrimary: CupertinoColors.systemGrey2),
-    PersistentBottomNavBarItem(icon: Icon(FontAwesomeIcons.baby, size: 7.w,), title: 'children', activeColorPrimary: Color(0xFF135D66), inactiveColorPrimary: CupertinoColors.systemGrey2),
+    PersistentBottomNavBarItem(icon: Icon(Icons.person, size: 7.w,), title: 'Individual', activeColorPrimary: const Color(0xFF135D66), inactiveColorPrimary: CupertinoColors.systemGrey2),
+    PersistentBottomNavBarItem(icon: Icon(FontAwesomeIcons.baby, size: 7.w,), title: 'children', activeColorPrimary: const Color(0xFF135D66), inactiveColorPrimary: CupertinoColors.systemGrey2),
   ];
 
   @override
