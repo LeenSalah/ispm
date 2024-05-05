@@ -11,13 +11,17 @@ class Ispm extends StatefulWidget {
   const Ispm({super.key});
 
   @override
+  State<Ispm> createState() => _IspmState();
+}
+
+class _IspmState extends State<Ispm> {
+  @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
       return MaterialApp(
         debugShowCheckedModeBanner: false,
-          theme: ThemeData(useMaterial3: false),
-           home: Home(),
+        theme: ThemeData(useMaterial3: false),
+        home: Home(),);
     });
   }
 }
-
