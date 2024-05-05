@@ -17,6 +17,7 @@ class _IndividualsPageState extends State<IndividualsPage> {
     super.initState();
     _fillShots();
   }
+
   List<ShotRecord> shotsRecord = [];
 
   @override
@@ -27,16 +28,19 @@ class _IndividualsPageState extends State<IndividualsPage> {
         padding: const EdgeInsets.all(10.0),
         child: Column(
           children: [
-            const Align(alignment: Alignment.centerLeft, child: Text('Vaccination history', style: TextStyle(fontSize: 20, color: Color(0xFF135D66)),)),
-            SizedBox(height: 3.h,),
+            const Align(
+                alignment: Alignment.centerLeft,
+                child: Text('Vaccination history',
+                    style: TextStyle(fontSize: 20, color: Color(0xFF135D66)))),
+            SizedBox(
+              height: 3.h,
+            ),
             Expanded(
-              child: ListView.builder(itemBuilder: (context, index) =>  Padding(
-                padding: const EdgeInsets.only(bottom: 20),
-                child: RecordWidget(shot: shotsRecord[index]),
-              ),
-              itemCount: shotsRecord.length,
-              ),
-            )
+                child: ListView.builder(
+                    itemBuilder: (context, index) => Padding(
+                        padding: const EdgeInsets.only(bottom: 20),
+                        child: RecordWidget(shot: shotsRecord[index])),
+                    itemCount: shotsRecord.length))
           ],
         ),
       ),

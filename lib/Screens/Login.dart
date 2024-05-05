@@ -3,17 +3,18 @@ import 'package:ispm/Screens/Users.dart';
 import 'package:ispm/Screens/signup.dart';
 
 class Login extends StatelessWidget {
+  const Login({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //resizeToAvoidBottomInset: true,
       appBar: AppBar(
-        title: const Padding(
-          padding: EdgeInsets.all(80.0),
-          child: Text(
-            'Login Page',
-            style: TextStyle(fontSize: 22,color: Colors.white),
-          ),
+        title: const Text(
+          'Login Page',
+          style: TextStyle(fontSize: 22),
         ),
+        centerTitle: true,
         backgroundColor: const Color(0xff135D66),
       ),
       body: Padding(
@@ -45,9 +46,13 @@ class Login extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  const Users()),
-                  );                },
-                child: const Text('Login', style: TextStyle(fontSize: 20, color: Colors.white),),
+                    MaterialPageRoute(builder: (context) => const Users()),
+                  );
+                },
+                child: const Text(
+                  'Login',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
               ),
             ),
             const SizedBox(height: 10.0),
@@ -57,23 +62,22 @@ class Login extends StatelessWidget {
                   "Don't have an account? ",
                   style: TextStyle(fontSize: 20.0),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(
+                  height: 20,
+                ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xff135D66),
-                    fixedSize: const Size(200, 55)
-                  ),
+                      backgroundColor: const Color(0xff135D66),
+                      fixedSize: const Size(200, 55)),
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) =>  const SignUp()),
+                      MaterialPageRoute(builder: (context) => const SignUp()),
                     );
-
                   },
                   child: const Text(
                     'SignUp',
                     style: TextStyle(fontSize: 20.0, color: Colors.white),
-
                   ),
                 ),
               ],

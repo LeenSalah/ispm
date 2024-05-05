@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ispm/Screens/nav_bar_screen.dart';
 
 class Users extends StatefulWidget {
   const Users({super.key});
@@ -38,9 +39,10 @@ class _UsersState extends State<Users> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff135D66),
                         fixedSize: const Size(190, 55)),
-                    onPressed: () {},
+                    onPressed: () {Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => BottomNavBar()),);},
                     child: const Text(
-                      "Provider",
+                      "Individual",
                       style: TextStyle(fontSize: 22, color: Colors.white),
                     )),
               ],
@@ -56,21 +58,12 @@ class _UsersState extends State<Users> {
                         fixedSize: const Size(190, 55)),
                     onPressed: () {},
                     child: const Text(
-                      "Provider",
+                      "Health care official",
                       style: TextStyle(fontSize: 22, color: Colors.white),
                     )),
                 const SizedBox(
                   height: 30,
                 ),
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff135D66),
-                        fixedSize: const Size(190, 55)),
-                    onPressed: () {},
-                    child: const Text(
-                      "Provider",
-                      style: TextStyle(fontSize: 22, color: Colors.white),
-                    ))
               ],
             ),
           ],
