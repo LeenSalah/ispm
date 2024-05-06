@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:ispm/Screens/Provider.dart';
 import 'package:sizer/sizer.dart';
 
 import '../child_vaccines.dart';
 import '../children.dart';
 import '../individuals.dart';
+import '../nav_bar_screen.dart';
 
 class Users extends StatefulWidget {
   const Users({super.key});
@@ -50,7 +52,7 @@ class _UsersState extends State<Users> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const IndividualsPage()),
+                        builder: (context) =>  BottomNavBar()),
                   );
                 },
                 child: const Text(
@@ -68,7 +70,7 @@ class _UsersState extends State<Users> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const IndividualsPage()),
+                        builder: (context) =>  Provider()),
                   );
                 },
                 child: const Text(
