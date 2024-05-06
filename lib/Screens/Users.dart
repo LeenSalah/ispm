@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ispm/Screens/provider.dart';
 
 class Users extends StatefulWidget {
   const Users({super.key});
@@ -26,7 +27,12 @@ class _UsersState extends State<Users> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff135D66),
                         fixedSize: const Size(190, 55)),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) =>  Provider()),
+                      );
+                    },
                     child: const Text(
                       "Provider",
                       style: TextStyle(fontSize: 22, color: Colors.white),
