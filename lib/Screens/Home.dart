@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ispm/Screens/Login.dart';
+import 'package:sizer/sizer.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -20,15 +21,15 @@ class _HomeState extends State<Home> {
             fit: BoxFit.cover,
           ),
           Positioned(
-            bottom: 450.0,
-            left: 120,
+            bottom: 53.h,
+            left: 30.w,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),
                 backgroundColor: const Color(0xffFEFAF6),
-                fixedSize: const Size(190, 50),
+                fixedSize:  Size(20.h, 15.w),
               ),
               onPressed: () {
                 Navigator.push(

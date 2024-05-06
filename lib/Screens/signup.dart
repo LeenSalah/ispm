@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 
+import '../common/app_bar.dart';
 import 'Users.dart';
 
 class SignUp extends StatefulWidget {
@@ -13,18 +15,9 @@ class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Padding(
-            padding: EdgeInsets.all(75.0),
-            child: Text(
-              'SignUp page',
-              style: TextStyle(fontSize: 22,color: Colors.white),
-            ),
-          ),
-          backgroundColor: const Color(0xff135D66),
-        ),
+        appBar: const CustomAppBar(title: 'SignUp page'),
         body: Padding(
-            padding: const EdgeInsets.all(30.0),
+            padding:  EdgeInsets.symmetric(vertical: 5.h, horizontal: 7.w),
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -34,27 +27,27 @@ class _SignUpState extends State<SignUp> {
                       labelText: 'Name',
                     ),
                   ),
-                  const SizedBox(height: 20.0),
+                   SizedBox(height: 2.h),
 
                   const TextField(
                     decoration: InputDecoration(
                       labelText: 'National ID',
                     ),
                   ),
-                  const SizedBox(height: 20.0),
+                   SizedBox(height: 2.h),
                   const TextField(
                     obscureText: true,
                     decoration: InputDecoration(
                       labelText: 'Password',
                     ),
                   ),
-                  const SizedBox(height: 20.0),
+                   SizedBox(height: 2.h ),
                   Padding(
-                    padding: const EdgeInsets.all(50.0),
+                    padding:  EdgeInsets.symmetric(vertical: 5.h, horizontal: 12.w),
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff135D66),
-                        fixedSize: const Size(350, 50),
+                        fixedSize:  Size(15.h, 13.w),
                       ),
                       onPressed: () {
                         Navigator.push(
