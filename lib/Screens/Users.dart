@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ispm/Screens/Provider.dart';
+import 'package:ispm/Screens/health_care_official.dart';
+import 'package:ispm/Screens/nav_bar_screen.dart';
 import 'package:sizer/sizer.dart';
-
-import '../child_vaccines.dart';
-import '../children.dart';
-import '../individuals.dart';
-import '../nav_bar_screen.dart';
-
 
 class Users extends StatefulWidget {
   const Users({super.key});
@@ -31,11 +27,11 @@ class _UsersState extends State<Users> {
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff135D66),
-                    fixedSize: const Size(250, 60)),
+                    fixedSize: const Size(250, 53)),
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => const ChildrenPage()),
+                    MaterialPageRoute(builder: (context) => const HealthCareOfficialPage()),
                   );
                 },
                 child: const Text(
@@ -48,7 +44,7 @@ class _UsersState extends State<Users> {
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff135D66),
-                    fixedSize: const Size(250, 55)),
+                    fixedSize: const Size(250, 53)),
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -66,7 +62,7 @@ class _UsersState extends State<Users> {
             ElevatedButton(
                 style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xff135D66),
-                    fixedSize: const Size(250, 55)),
+                    fixedSize: const Size(250, 53)),
                 onPressed: () {
                   Navigator.push(
                     context,
