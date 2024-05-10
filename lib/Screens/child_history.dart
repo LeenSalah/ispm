@@ -87,9 +87,11 @@ class _ChildHistoryPageState extends State<ChildHistoryPage> {
     );
   }
   void _fillShots() {
-    shotsRecord.add(ShotRecord(name: 'Pfizer', date: '22/5/2024'));
-    shotsRecord.add(ShotRecord(name: 'Allergy shot', date: '22/5/2024'));
-    shotsRecord.add(ShotRecord(name: 'Flu shot', date: '22/5/2024'));
-    shotsRecord.add(ShotRecord(name: 'Polio', date: '22/5/2024'));
+    shotsRecord.add(ShotRecord(name: 'Pneumococcal', date: '23/7/2024'));
+    shotsRecord.add(ShotRecord(name: 'influenza', date: '23/7/2024'));
+    shotsRecord.add(ShotRecord(name: 'Polio', date: '23/7/2024'));
+    shotsRecord.add(ShotRecord(name: 'Rotavirus', date: '23/7/2024'));
+    shotsRecord.add(ShotRecord(name: 'Hib', date: '23/7/2024'));
+    shotsRecord.add(ShotRecord(name: 'DTaP', date: '23/7/2024'));
   }
 }
