@@ -27,7 +27,7 @@ class PieChartSample1State extends State {
             children: <Widget>[
               Indicator(
                 color: AppColors.contentColorBlue,
-                text: 'One',
+                text: 'Amman',
                 isSquare: false,
                 size: touchedIndex == 0 ? 18 : 16,
                 textColor: touchedIndex == 0
@@ -36,7 +36,7 @@ class PieChartSample1State extends State {
               ),
               Indicator(
                 color: AppColors.contentColorYellow,
-                text: 'Two',
+                text: 'Zarqa',
                 isSquare: false,
                 size: touchedIndex == 1 ? 18 : 16,
                 textColor: touchedIndex == 1
@@ -45,7 +45,7 @@ class PieChartSample1State extends State {
               ),
               Indicator(
                 color: AppColors.contentColorPink,
-                text: 'Three',
+                text: 'Albaqa',
                 isSquare: false,
                 size: touchedIndex == 2 ? 18 : 16,
                 textColor: touchedIndex == 2
@@ -54,7 +54,7 @@ class PieChartSample1State extends State {
               ),
               Indicator(
                 color: AppColors.contentColorGreen,
-                text: 'Four',
+                text: 'Madaba',
                 isSquare: false,
                 size: touchedIndex == 3 ? 18 : 16,
                 textColor: touchedIndex == 3
