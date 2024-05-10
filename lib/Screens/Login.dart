@@ -6,11 +6,12 @@ import 'package:sizer/sizer.dart';
 import '../common/app_bar.dart';
 
 class Login extends StatelessWidget {
+  const Login({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(title: 'Login Page'),
-
       body: Padding(
         padding:  EdgeInsets.symmetric(horizontal: 5.w,),
         child: Column(
@@ -40,9 +41,13 @@ class Login extends StatelessWidget {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>  const Users()),
-                  );                },
-                child: const Text('Login', style: TextStyle(fontSize: 20, color: Colors.white),),
+                    MaterialPageRoute(builder: (context) => const Users()),
+                  );
+                },
+                child: const Text(
+                  'Login',
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
               ),
             ),
              SizedBox(height: 2.h),
@@ -61,14 +66,12 @@ class Login extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) =>  const SignUp()),
+                      MaterialPageRoute(builder: (context) => const SignUp()),
                     );
-
                   },
                   child: const Text(
                     'SignUp',
                     style: TextStyle(fontSize: 20.0, color: Colors.white),
-
                   ),
                 ),
               ],

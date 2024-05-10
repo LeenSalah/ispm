@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ispm/children.dart';
-import 'package:ispm/individuals.dart';
+import 'package:ispm/Screens/children.dart';
+import 'package:ispm/Screens/individuals.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:sizer/sizer.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

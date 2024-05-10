@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:ispm/child_vaccines.dart';
+import 'package:ispm/Screens/child_vaccines.dart';
 import 'package:ispm/common/app_bar.dart';
 import 'package:persistent_bottom_nav_bar/persistent_tab_view.dart';
 import 'package:sizer/sizer.dart';
 
-import 'models/children_model.dart';
+import '../models/children_model.dart';
 
 class ChildrenPage extends StatefulWidget {
   const ChildrenPage({Key? key}) : super(key: key);
