@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:ispm/Screens/Users.dart';
 import 'package:ispm/Screens/signup.dart';
+import 'package:sizer/sizer.dart';
+
+import '../common/app_bar.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -8,17 +11,9 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //resizeToAvoidBottomInset: true,
-      appBar: AppBar(
-        title: const Text(
-          'Login Page',
-          style: TextStyle(fontSize: 22),
-        ),
-        centerTitle: true,
-        backgroundColor: const Color(0xff135D66),
-      ),
+      appBar: const CustomAppBar(title: 'Login Page'),
       body: Padding(
-        padding: const EdgeInsets.all(30.0),
+        padding:  EdgeInsets.symmetric(horizontal: 5.w,),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -28,20 +23,20 @@ class Login extends StatelessWidget {
                 labelText: 'National ID',
               ),
             ),
-            const SizedBox(height: 20.0),
+             SizedBox(height: 2.h),
             const TextField(
               obscureText: true,
               decoration: InputDecoration(
                 labelText: 'Password',
               ),
             ),
-            const SizedBox(height: 20.0),
+             SizedBox(height: 2.h),
             Padding(
-              padding: const EdgeInsets.all(50.0),
+              padding:  EdgeInsets.symmetric(horizontal: 10.w, vertical: 3.h),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xff135D66),
-                  fixedSize: const Size(350, 50),
+                  fixedSize:  Size(2.h, 15.w),
                 ),
                 onPressed: () {
                   Navigator.push(
@@ -55,20 +50,19 @@ class Login extends StatelessWidget {
                 ),
               ),
             ),
-            const SizedBox(height: 10.0),
+             SizedBox(height: 2.h),
             Column(
               children: [
                 const Text(
                   "Don't have an account? ",
                   style: TextStyle(fontSize: 20.0),
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
+                 SizedBox(height: 2.h),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xff135D66),
-                      fixedSize: const Size(200, 55)),
+                    backgroundColor: const Color(0xff135D66),
+                    fixedSize:  Size(20.h, 15.w)
+                  ),
                   onPressed: () {
                     Navigator.push(
                       context,

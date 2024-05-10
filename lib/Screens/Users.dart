@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ispm/Screens/nav_bar_screen.dart';
+import 'package:ispm/Screens/Provider.dart';
+import 'package:sizer/sizer.dart';
+
+import '../child_vaccines.dart';
+import '../children.dart';
+import '../individuals.dart';
+import '../nav_bar_screen.dart';
+
 
 class Users extends StatefulWidget {
   const Users({super.key});
@@ -18,57 +25,62 @@ class _UsersState extends State<Users> {
         fit: BoxFit.cover,
       ),
       Padding(
-        padding: const EdgeInsets.symmetric(vertical: 330, horizontal: 8),
-        child: Row(
+        padding:  EdgeInsets.symmetric(vertical: 35.h),
+        child: Column(
           children: [
-            Column(
-              children: [
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff135D66),
-                        fixedSize: const Size(190, 55)),
-                    onPressed: () {},
-                    child: const Text(
-                      "Provider",
-                      style: TextStyle(fontSize: 22, color: Colors.white),
-                    )),
-                const SizedBox(
-                  height: 30,
-                ),
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff135D66),
-                        fixedSize: const Size(190, 55)),
-                    onPressed: () {Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => BottomNavBar()),);},
-                    child: const Text(
-                      "Individual",
-                      style: TextStyle(fontSize: 22, color: Colors.white),
-                    )),
-              ],
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xff135D66),
+                    fixedSize: const Size(250, 60)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ChildrenPage()),
+                  );
+                },
+                child: const Text(
+                  "HealthCare official",
+                  style: TextStyle(fontSize: 22, color: Colors.white),
+                )),
+            SizedBox(
+              height: 5.h,
             ),
-            const SizedBox(
-              width: 8,
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xff135D66),
+                    fixedSize: const Size(250, 55)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>  BottomNavBar()),
+                  );
+                },
+                child: const Text(
+                  "Individuals",
+                  style: TextStyle(fontSize: 22, color: Colors.white),
+                )),
+            SizedBox(
+              height: 5.h,
             ),
-            Column(
-              children: [
-                ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff135D66),
-                        fixedSize: const Size(190, 55)),
-                    onPressed: () {},
-                    child: const Text(
-                      "Health care official",
-                      style: TextStyle(fontSize: 22, color: Colors.white),
-                    )),
-                const SizedBox(
-                  height: 30,
-                ),
-              ],
-            ),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xff135D66),
+                    fixedSize: const Size(250, 55)),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>  Provider()),
+                  );
+                },
+                child: const Text(
+                  "Provider",
+                  style: TextStyle(fontSize: 22, color: Colors.white),
+                ))
           ],
         ),
-      )
+      ),
     ]));
   }
 }
